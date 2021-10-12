@@ -39,3 +39,14 @@ for i in {0..10..2}
   do 
      echo "Welcome $i times"
  done
+ #
+ #
+ # The for Loop argument list also accpents Command-line arguments/paramenters as follows:
+ # script.sh
+ # run as follow : 
+ #       ./script one foo bar
+ ## $@ expands to the positional parameters, starting from one.  ##
+for i in $@
+do
+    echo "Script arg is $i"
+done
